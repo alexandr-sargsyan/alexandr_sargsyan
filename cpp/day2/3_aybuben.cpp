@@ -14,7 +14,7 @@ cin >> i;
 		break;
 
 		default :
-		cout << " baxadzayn e ";
+		cout << " baxadzayn e  \n";
 	} 
 
 
