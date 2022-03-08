@@ -1,7 +1,7 @@
 #include  <iostream>
 using namespace std;
 
-int main (){
+void aybuben (){
 	char i;
 	cout << "greq 1 tar \n";
 	cin >> i; 
@@ -36,5 +36,28 @@ int main (){
 
 
 	}
+
+
+}
+
+
+int main (){
+
+aybuben();
+
 return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
