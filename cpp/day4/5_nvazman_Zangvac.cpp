@@ -29,20 +29,18 @@ int main() {
 	
          	cout << endl;
 		
-                  
-	for (int i=0; i < sizeof(arr)/4; i++){
- 
-		for (int j=i; j < sizeof(arr)/4; j++){
-		
-			if (arr[i] < arr[j]) {
-             
-            		    int a = arr[i];
-          	            arr[i] = arr[j];
-               		    arr[j] = a;
+                
 
-			}
-			
-		}
+   int a ;
+   int b = sizeof(arr)/4 - 1;;  
+	for (int i=0; i < sizeof(arr)/4/2; i++){
+          
+	   a = arr[i];
+	   arr[i] = arr[b];
+	   arr[b] = a;
+		
+
+	   b--;
 	}
          
 
