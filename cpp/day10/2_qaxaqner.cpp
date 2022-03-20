@@ -12,11 +12,11 @@ using namespace std;                               // halyam prcacchi bayc
 
 int menu(void) {  
  
-   cout<<"_____________________\n || IGRA  GORODA||\n_____________________\n";
-   cout<<"Menu:\n 0. Kanonner \n 1. Sksem es ; \n 2. Sksi kompyutery ;\n 3. Dursgal\n";
-   cout<<" Yntreq tarberak :\n";
+   cout<<"_____________________\n || QAXAQNER ||\n_____________________\n";
+   cout<<"Menu: \n 1. Sksem es ; \n 2. Sksi kompyutery ;\n " ;
+   cout<<" Yntreq tarberak : --->  ";
    int c;
-   cin>>c;
+   cin >> c;
    return c;
    
  }
@@ -24,71 +24,62 @@ int menu(void) {
 //--------------------------------------------------------------------------------------------------------- 1
 
 
-  int menuyHraman (void) {
+  int menuyHraman (int a) {
                                  
-                    switch(menu()) {  
-                                 case 0:
-				    kanonner();  
-	 			    break;
+                    switch(a) { 
            
-	                         case1: 
-                                    sksel(0);
-                                    break;
+	                         case 1: 
+                                    return 1;
        
-                                 case2:
-                                    sksel (1);
-                                    break;
-                                   
-                                 case3: 
-                                    return 0;
-                                    break;
-                                                       
-                                 default :                                                     
-                                    return 0;
+                                 case 2:
+                                    return 2;                                                 
+                             
                                 }
 
-		return 0;
+		return 99;
 	}
-//------------------------------------------------------------------------------------------------------------2
 
-
-void kanonner() {
-
-cout << "qaxaqner xax qaxaqneri anunerq grum , anunnery skksvum e ayn taric vorov verjacrel e naxord masnakicy !!!";
-   menu();
-}
 
 //----------------------------------------------------------------------------------------------------------3
 
   void sksel (int a) {
 
-  string arr [] = {"erevan" , "stepanakert", "masvkva " , "paris" , "oslo" , "astana" , "ankara" , "baku", "amsterdam" };
+  int x = a;
 
- int b = rand() % 4;
+  string arr [] = {"erevan" , "stepanakert", "masvkva" , "paris" , "oslo" , "astana" , "ankara" , "baku", "amsterdam" };
+
+ int b = rand() % 6;
  string mard ;
+ bool c = false;       // es kiraca ver  2 rd ific skse 3 rord if- @ mtnevech
+ bool f = true;
 
-	  while (1) {
-
-	
-	  if (a == 1) {
+	  while (f) {
+            
+		
+	  if (x == 2) {
 		
 		cout << arr[b] << " ---> ";
-		a = 0;
+		x = 1;
+		c = true;
 		}
 
-	  if (a == 0) {
-
+	  if (x == 1) {
+		
+		cout << " input --->  ";
 		cin >> mard;
-		a = 1;
+		x = 2;
 		}
 
-	  if (arr[b][arr[b].length() - 1] != mard[0] ) {
+	  if ( c && arr[b][arr[b].length() - 1] != mard[0] ) {
 
-		cout << "          game over        " ;
+		cout << " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|||||||     GAME OVER     ||||||||<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl << endl;
                      break;
 		}
 
+	if (c){
+	
 	arr[b] = "0000";
+	};
 	  
       
 	for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++) {
@@ -100,8 +91,9 @@ cout << "qaxaqner xax qaxaqneri anunerq grum , anunnery skksvum e ayn taric voro
 		break;
 	}
 		if ( i == (sizeof(arr)/sizeof(arr[0]) - 1)) {
-		cout << " kompi barery prcala duq haxtel ek !!!";
-                 menu();
+		cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ||||||  Kompi barery prcala duq haxtel ek !!!  |||||  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<" << endl << endl;
+                f = false ; 
+		break;
                     }
 
 
@@ -117,29 +109,16 @@ cout << "qaxaqner xax qaxaqneri anunerq grum , anunnery skksvum e ayn taric voro
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main (){
 
-sksel ( menuyHraman ( menu() )) ;
+  int i = menu();
 
 
+  int j = menuyHraman(i);
 
 
+  sksel(j);
 
-
-
-
+	
 	return 0;
 }
