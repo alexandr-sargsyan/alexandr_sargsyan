@@ -1,0 +1,9 @@
+barev->hello
+anun->name
+azganun->surname
+taric->age
+es->i
+du->you
+ardzakurd->holiday
+aysor->tuday
+gnal->go
