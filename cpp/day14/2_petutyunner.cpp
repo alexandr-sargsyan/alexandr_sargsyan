@@ -137,13 +137,13 @@ int main(int argc , char * argv[]){
 	for(int i = 0; i < 1; i++ ) {
 
 	
-    	cout << arr[index].countryName << endl;
-     	cout << arr[index].capital << endl;
-     	cout << arr[index].domain << endl;
-     	cout << arr[index].population << endl;
-     	cout << arr[index].area << endl;
-     	cout << arr[index].gdp << endl;
-    	cout << arr[index].phonecode << endl;
+        cout << "countryName ---> " << arr[index].countryName << endl;
+     	cout << "capital ---> " << arr[index].capital << endl;
+     	cout << "domain---> " << arr[index].domain << endl;
+     	cout << "population ---> "<< arr[index].population << endl;
+     	cout << "area ---> " << arr[index].area << endl;
+     	cout << "gdp ---> " << arr[index].gdp << endl;
+    	cout << "phonecode ---> " << arr[index].phonecode << endl;
 	
 	}
 
@@ -158,22 +158,99 @@ int main(int argc , char * argv[]){
 
 
 
+      else if (strcmp(argv[1], "compare") == 0){
 
 
 
+	cout << "Input first Country: ---> ";
+	string c1,c2;
+	getline(cin, c1);
+
+
+	cout << endl <<  "Input second Country ---> ";
+	getline(cin, c2);
+
+	cout << endl << "==============================================================" << endl;
+
+	cout << "\t\t | " << c1 << "\t |" << c2 ;
+
+	cout << endl << "==============================================================" << endl;
+		
+
+	int index_c1 = -10;
+	int index_c2 = -10;
+
+	for (int i = 0; i < rows ; i++) {
+
+	   if(arr[i].countryName == c1) {
+
+	      index_c1 = i;
+	   }
+
+	
+	   if(arr[i].countryName == c2) {
+
+	      index_c2 = i;
+	   }
+
+
+	}
+
+	if(index_c1 < 0 | index_c2 < 0) {
+
+		cout << "-------- >>>> chka nman petutyun !!!  <<<< -----------" <<endl;
+		return 0;
+	}
+
+	
+
+
+	char mec = '>';
+	char pocr = '<';
+	char com;
+
+	cout << "Capital \t |" << arr[index_c1].capital << "   \t | " << arr[index_c2].capital << endl; 
+	cout << "domain  \t |" << arr[index_c1].domain  << "\t\t | " << arr[index_c2].domain << endl;
+
+	   if (arr[index_c1].population > arr[index_c2].population) {
+
+		com = mec;
+	   }else{
+
+		com = pocr;
+		}
+		
+	cout << "population \t |" << arr[index_c1].population << "\t " << com << " " << arr[index_c2].population << endl;
 
 
 
+	   if (arr[index_c1].area > arr[index_c2].area) {
 
-////// hamemately hscralchum sor kanim 
+		com = mec;
+	   }else{
+
+		com = pocr;
+		}
+		
+	cout << "area \t\t |" << arr[index_c1].area << "  \t " << com << " " << arr[index_c2].area << endl;
+
+
+	   if (arr[index_c1].gdp > arr[index_c2].gdp) {
+
+		com = mec;
+	   }else{
+
+		com = pocr;
+		}
+		
+	cout << "gdp \t\t |" << arr[index_c1].gdp << "\t\t " << com << " " << arr[index_c2].gdp << endl;
+
+	cout << "phonecode \t |" << arr[index_c1].phonecode << "\t\t | " << arr[index_c2].phonecode << endl; 
 
 
 
-
-
-
-
-
+	
+	} 
 
 
 
