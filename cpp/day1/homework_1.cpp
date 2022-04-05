@@ -15,20 +15,20 @@ int main (){
                  
 
 		}else{ 
-		 cout << "gushakeq tivy : ";
-                 cin >> num;
+		    cout << "gushakeq tivy : ";
+                    cin >> num;
 
-		 if (num < xnum ) {
-                 cout << " porceq aveli mec tiv \n ";
+		 	if (num < xnum ) {
+                	 cout << " porceq aveli mec tiv \n ";
                  
-                 }
+                 	}
  
-                 else if (num > xnum) {
-                 cout << "porceq  aveli poqr tiv \n ";
+                 	else if (num > xnum) {
+                 	cout << "porceq  aveli poqr tiv \n ";
                  
-                 } else{
-  			cout << "YESSSSS! \n ";
-		}
+                 	} else{
+  			   cout << "YESSSSS! \n ";
+			}
 		}
 	}   
 	while (num != xnum);

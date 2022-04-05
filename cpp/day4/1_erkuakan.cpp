@@ -14,11 +14,11 @@ int erkuakan (int a) {
 	
 	while (a){
  	
-	 d = d + i *( a % 2 );
+	   d = d + i *( a % 2 );
 	 
-	 a = a / 2; 
+	   a = a / 2; 
 
-	 i = i * 10;
+	   i = i * 10;
 	}	
 	
 	return d;	

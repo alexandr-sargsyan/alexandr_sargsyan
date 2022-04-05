@@ -15,7 +15,7 @@ bool kataryal_tiv(int a) {
 		if (a % i == 0) {
 	
 		d = d + i;
-			}
+		}
 	}
 
 		if (d == a) {

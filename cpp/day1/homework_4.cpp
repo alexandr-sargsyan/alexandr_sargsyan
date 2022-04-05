@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-   int main (){  
+int main (){ 
+ 
  int sum_hav;
  int sum_cows;
  int sum_pigs;

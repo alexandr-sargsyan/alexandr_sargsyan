@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
    
-  int main (){ 
+
+int main (){ 
 
  int laynutyun;
  int erkarutyun;
  
- cout << "greq uxankyan laynutyunhy \n";
+cout << "greq uxankyan laynutyunhy \n";
   cin >> laynutyun;
 cout << "greq uxankyan erkarutyuny \n";
   cin >> erkarutyun;

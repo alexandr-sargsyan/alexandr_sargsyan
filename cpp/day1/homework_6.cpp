@@ -8,13 +8,14 @@ using namespace std;
   cout << "mutqagreq tivy \n";
   cin >> i;
   int a = i;
+
   while (i) {
 
   factorial = factorial * i;
    i--;
 
 
-}
+  }
 
   cout << a << "! = " << factorial << "\n";
 
