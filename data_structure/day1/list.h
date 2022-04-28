@@ -1,5 +1,6 @@
 #ifndef LIST_H
 #define LIST_H
+#include <exception>
 using namespace std;
 
 template <typename T>
@@ -93,9 +94,9 @@ T &List<T>::operator[](const int index) // []- operatory peregruzkaya yrac
         current = current->pNext;
         count++;
     }
-
-    runtime_error e((char *)"Error! Sxal index");
-    throw e;
+    throw exception();
+    //    runtime_error e((char *)"Error! Sxal index");
+    //  throw e;
 }
 
 template <typename T>
@@ -130,8 +131,10 @@ void List<T>::remove_index(int index)
 {
     if (index >= _size)
     {
-        runtime_error e((char *)"Error! Sxal index");
-        throw e;
+        throw exception();
+
+        // runtime_error e((char *)"Error! Sxal index");
+        // throw e;
     }
 
     if (index == 0)

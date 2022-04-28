@@ -1,14 +1,14 @@
 #include <iostream>
 #include <stack>
 #include <string>
-
 #include "list.h"
-#include "stach.h"
+#include "stack.h"
 
 using namespace std;
 int main()
 {
-    Stack <>
+    
+    
     try
     {
         List<int> a2;
@@ -22,7 +22,7 @@ int main()
         a2.remove_index(2);
         a2.addAt(40, 2);
         cout << a2.getElement(3) << endl;
-        cout << a2[2] << endl;
+        cout << a2[29] << endl;
         cout << a2.getElement(1) << endl;
     }
     catch (const std::exception &e)
