@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../day5/node.hpp"
+#include "node.hpp"
 #include <queue>
 using namespace std;
 
