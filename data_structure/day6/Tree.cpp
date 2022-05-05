@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "../day4/BinaryTree.hpp"
-#include "../day5/node.hpp"
+#include "../day4/node.hpp"
 using namespace std;
 
 bool checkRoot(bool **arr, int size);
