@@ -5,19 +5,16 @@
 using namespace std;
 
 template <typename T>
-class List
-{
-private:
+class List {
+ private:
   template <typename U>
-  class Node
-  {
-  public:
+  class Node {
+   public:
     Node *pNext;
     U data;
     string key;
 
-    Node(U data = U(), string key = "", Node *pNext = nullptr)
-    {
+    Node(U data = U(), string key = "", Node *pNext = nullptr) {
       this->data = data;
       this->key = key;
       this->pNext = pNext;
@@ -27,7 +24,7 @@ private:
   Node<T> *tail;
   int _size;
 
-public:
+ public:
   // string getNOdKkey() { return key; }
   List();
   ~List();
@@ -45,28 +42,22 @@ public:
 };
 
 template <typename T>
-List<T>::List()
-{
+List<T>::List() {
   head = nullptr;
   _size = 0;
 }
 
 template <typename T>
-List<T>::~List()
-{
+List<T>::~List() {
   removeAll();
 }
 
 template <typename T>
-void List<T>::addEnd(T data, string key)
-{
-  if (head == nullptr)
-  {
+void List<T>::addEnd(T data, string key) {
+  if (head == nullptr) {
     head = new Node<T>(data, key);
     tail = head;
-  }
-  else
-  {
+  } else {
     Node<T> *current = tail;
     current->pNext = new Node<T>(data, key);
     tail = current->pNext;
@@ -75,8 +66,7 @@ void List<T>::addEnd(T data, string key)
 }
 
 template <typename T>
-void List<T>::removeFront()
-{
+void List<T>::removeFront() {
   Node<T> *courrent = head;
   head = head->pNext;
   delete courrent;
@@ -84,28 +74,20 @@ void List<T>::removeFront()
 }
 
 template <typename T>
-void List<T>::removeAll()
-{
-  while (_size)
-  {
+void List<T>::removeAll() {
+  while (_size) {
     removeFront();
   }
 }
 
 template <typename T>
-void List<T>::removeAt(int index)
-{
-  if (index == 0)
-  {
+void List<T>::removeAt(int index) {
+  if (index == 0) {
     removeFront();
-  }
-  else
-  {
+  } else {
     Node<T> *cour1 = head;
-    for (int i = 0; i < (index - 1); i++)
-    {
-      if (cour1 == nullptr)
-      {
+    for (int i = 0; i < (index - 1); i++) {
+      if (cour1 == nullptr) {
         return;
       }
       cour1 = cour1->pNext;
@@ -118,14 +100,11 @@ void List<T>::removeAt(int index)
 }
 
 template <typename T>
-void List<T>::removeEnd()
-{
+void List<T>::removeEnd() {
   Node<T> *current = head;
-  for (int i = 0; i <= _size - 2; i++)
-  {
+  for (int i = 0; i <= _size - 2; i++) {
     current = current->pNext;
-    if (i == _size - 3)
-    {
+    if (i == _size - 3) {
       tail = current;
     }
   }
@@ -135,33 +114,27 @@ void List<T>::removeEnd()
 }
 
 template <typename T>
-string List<T>::getElement(int index)
-{
+string List<T>::getElement(int index) {
   Node<T> *curr = head;
-  for (int i = 0; i < index; i++)
-  {
+  for (int i = 0; i < index; i++) {
     curr = curr->pNext;
   }
   return curr->key;
 }
 
 template <typename T>
-T List<T>::getDate(int index)
-{
+T List<T>::getDate(int index) {
   Node<T> *curr = head;
-  for (int i = 0; i < index; i++)
-  {
+  for (int i = 0; i < index; i++) {
     curr = curr->pNext;
   }
   return curr->data;
 }
 
 template <typename T>
-void List<T>::_print()
-{
+void List<T>::_print() {
   Node<T> *head1 = head;
-  while (head1)
-  {
+  while (head1) {
     cout << head1->key << " -> " << head1->data << ", ";
     cout << endl;
     head1 = head1->pNext;
