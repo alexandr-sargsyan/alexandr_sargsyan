@@ -1,8 +1,6 @@
 #include "hashTable.hpp"
 
-int main()
-{
-
+int main() {
   HashTable a;
   a.insert("alexandr", 17);
   // a.insert("alexandr", 12);
@@ -13,14 +11,14 @@ int main()
   a.insert("laexandr", 17);
   a.insert("daxo", 1);
   a.insert("narek", 16);
+  a.delite("bek");
+  a.delite("andon");
   a.delite("narek");
-
   a.resize_X2();
 
   a.print();
   cout << "countElement = " << a.countElement() << endl;
   cout << a.find("alexandr") << endl;
-  
 
   cout << endl;
 
