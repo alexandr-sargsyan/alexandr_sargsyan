@@ -1,5 +1,0 @@
-Armenia Yerevan .am 2963000 29743 4267
-Russia Moscow .ru 144000000 17100000 28356
-France Pariz .fr 6700000 543940 38625
-Germany Berlin .de 83000000 357022 45723
-Georgia Tbilisi .ge 3714000 69700 4278

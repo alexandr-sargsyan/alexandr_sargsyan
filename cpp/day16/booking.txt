@@ -1,6 +1,0 @@
-Goris Eraz 4 2 8000 3 12000 4 15000 1 20000 0 1 1 1
-Stepanakert Menua 3 4 7000 5 10000 7 17000 2 23000 0 0 1 1
-Goris Syunik 5 3 9000 5 14000 3 20000 7 35000 1 1 1 1
-stepanakert Axtamar 3 5 10000 6 15000 7 20000 0 0 0 0 0 0 
-stepanakert knar 1 2 10000 3 13000 4 20000 0 0 0 0 1 0 
-               
