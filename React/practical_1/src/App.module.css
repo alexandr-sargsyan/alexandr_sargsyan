@@ -1,0 +1,21 @@
+ img {
+    width: 150px;
+}
+
+.Button{
+    margin-left: 12px;
+    width: 10%;
+    height: 30px;
+    display: block;
+    background-color: cornflowerblue;
+    border-radius: 30%;
+    border: 3px solid orange;
+}
+
+
+
+.App input {
+    margin: 1%;
+    width: 20%;
+    border: 3px solid rgb(0, 0, 0);
+}
