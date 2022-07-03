@@ -1,7 +1,6 @@
- img {
+img {
     width: 150px;
 }
-
 .Button{
     margin-left: 12px;
     width: 10%;
@@ -11,11 +10,42 @@
     border-radius: 30%;
     border: 3px solid orange;
 }
-
-
-
 .App input {
     margin: 1%;
     width: 20%;
     border: 3px solid rgb(0, 0, 0);
+}
+.filmCounnt{
+    background-color: rgb(13, 0, 255);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.AddListActive{
+   
+    display: grid;
+    position: fixed;
+    grid-template-columns: auto ;   
+    background-color: #2196F3;
+    /* position: absolute; */
+    height: 400px;
+    width: 400px;
+    border: 5px solid rgb(0, 0, 0);
+    margin: -3% 60%;
+   
+}
+
+.AddListNoActive{
+    display: none;
+}
+
+.AddList input{
+ width: max-content;
+ margin: 10px;
+}
+
+.AddListButton1{
+    margin: 10px;
+}
+.AddListButton{
+    margin-left: 90%;
 }

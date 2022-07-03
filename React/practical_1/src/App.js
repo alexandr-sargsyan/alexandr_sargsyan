@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FilmContainer } from "./FilmContainer"
 import mcss from './App.module.css';
 import Img1 from "./images/film1.png"
@@ -7,6 +7,7 @@ import Img3 from "./images/film3.jpg"
 import Img4 from "./images/film4.jpg"
 import Img5 from "./images/film5.jpg"
 import Img6 from "./images/film6.jpg"
+import Img777 from "./images/film777.jpg"
 const films = [
   {
     name: "The Green Mile",
@@ -40,7 +41,22 @@ const films = [
   }
 ]
 function App() {
-  let [f1, setF1] = useState(films)
+
+  const input = useRef();
+  const input1 = useRef();
+  let [f1, setF1] = useState(films);
+  let filmCounnt = f1.length;
+  let [adding, setAdding] = useState({});
+  let [addListActiv, setAddListActiv] = useState(false)
+
+  let onDeliteApp = (filmName) => {
+    setF1(() => {
+      films.forEach((el, index) => { if (el.name === filmName) { films.splice(index, 1) } });
+      let newArray = films;
+      return newArray.filter(item => item.name != filmName);
+    })
+  }
+
   // let [rand, setRand] = useState(films)
   return (
     <div className={mcss.App}>
@@ -55,23 +71,52 @@ function App() {
           })
         }} type="text" placeholder="Search">
         </input>
+        <span className={mcss.filmCounnt}>Count: {filmCounnt}</span>
+
+        <button className={mcss.Add} onClick={() => { setAddListActiv(true) }}>Add</button>
+
+
+
+        <div className={addListActiv ? mcss.AddListActive : mcss.AddListNoActive}>
+          <button className={mcss.AddListButton} onClick={() => { setAddListActiv(false) }} >X</button>
+          <h2 style={{ color: "white" }}>add film</h2>
+          <input placeholder="yor film name" ref={input} type="text" className={mcss.AddListImput1} />
+          <input placeholder="yor film decription" ref={input1} type="text" className={mcss.AddListImput2} />
+          <button className={mcss.AddListButton1} onClick={() => {
+            setF1(() => {
+              films.push({
+                name: input.current.value,
+                img: Img777,
+                discription: input1.current.value
+              })
+              let arr = films.map((el) => { return el });
+              //////return (films) ---> xi chi ashxatum ?
+              return (arr)
+            })
+            setAddListActiv(false)
+          }
+          }>Add</button>
+        </div>
 
         <button className={mcss.Button} onClick={() => {
           let rond = Math.ceil(Math.random() * (films.length - 1))
-          setF1(()=> {
-            let arr = films.map((el)=> { return el});
+          setF1(() => {
+            let arr = films.map((el) => { return el });
             arr.push(films[rond])
-            
-            return(
-             arr
+            return (
+              arr
               // f1.push(f1[1])
               // films.push(f1[1])
             )
           })
         }} >Random</button>
       </div>
-      <FilmContainer className={mcss.FilmContainer} arr={f1} />
+
+      <FilmContainer className={mcss.FilmContainer} arr={f1} onDeliteApp={onDeliteApp} />
+
     </div>
   );
 }
 export default App;
+
+;
