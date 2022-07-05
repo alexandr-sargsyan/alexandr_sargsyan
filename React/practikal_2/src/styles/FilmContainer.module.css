@@ -1,0 +1,7 @@
+.FilmContainer{
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px solid rgb(0, 81, 255);
+
+}
