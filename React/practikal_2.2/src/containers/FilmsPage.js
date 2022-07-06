@@ -9,29 +9,19 @@ import { RondomAddButton } from "../components/filmComponents/RondomAddButton";
 export const films = startFilmArray;
 
 function FilmsPage() {
-  let [newFilms, setnewFilms] = useState(films);
-  let filmCounnt = newFilms.length;
-  let [adding, setAdding] = useState({});
+    let [newFilms, setnewFilms] = useState(films);
+    let filmCounnt = newFilms.length;
 
-  return (
-    <contextFilms.Provider value={{ newFilms, setnewFilms }}>
-
-      <div className={mcss.App}>
-
-        <Search className={mcss.Search} />
-
-        <span className={mcss.filmCounnt}>Count: {filmCounnt}</span>
-
-        <AddFilm />
-        
-        <RondomAddButton className={mcss.Button} />
-
-        <FilmContainer className={mcss.FilmContainer} arr={newFilms} />
-      </div>
-
-    </contextFilms.Provider>
-  );
+    return (
+        <contextFilms.Provider value={{ newFilms, setnewFilms }}>
+            <div className={mcss.App}>
+                <Search className={mcss.Search} />
+                <span className={mcss.filmCounnt}>Count: {filmCounnt}</span>
+                <AddFilm />
+                <RondomAddButton className={mcss.Button} />
+                <FilmContainer className={mcss.FilmContainer} arr={newFilms} />
+            </div>
+        </contextFilms.Provider>
+    );
 }
 export default FilmsPage;
-
-;

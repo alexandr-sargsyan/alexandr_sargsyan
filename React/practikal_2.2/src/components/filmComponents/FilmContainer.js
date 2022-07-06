@@ -5,7 +5,7 @@ function FilmContainer(props) {
     return (
         <div className={mcss.FilmContainer}>{
             arr.map((elem, i) => {
-                return <Film key={i} film={elem} />
+                return <Film key={elem.id} film={elem} />
             })
         }
         </div>

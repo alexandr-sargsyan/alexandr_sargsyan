@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import FilmsPage from "./FilmsPage"
 import { HomePage } from "./HomePage";
 import { HeaderPage } from "../components/HeadContainerComponents/HeaderPage";
@@ -17,12 +17,13 @@ export function HeadContainer() {
             <Routes>
                 <Route path="/" element={<HeaderPage />}>
                     <Route index element={<HomePage />} />
-                    <Route path="films" element={<FilmsPage />} />
-                    <Route path="films/:title" element={<SinglFilme/>}/>
+                    <Route path="" element={<Outlet />}>
+                        <Route path="films" element={<FilmsPage />} />
+                        <Route path="films/:title" element={<SinglFilme />} />
+                    </Route>
                     <Route path="*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
-
         </>
     )
 }

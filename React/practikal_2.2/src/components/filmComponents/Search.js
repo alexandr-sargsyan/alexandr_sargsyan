@@ -5,9 +5,7 @@ import { films } from "../../containers/FilmsPage";
 
 export function Search() {
     const { newFilms, setnewFilms } = useContext(contextFilms);
-
     return (
-
         <div>
             <input onChange={(e) => {
                 setnewFilms(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext, useRef ,useState} from "react";
+import { useContext, useRef, useState } from "react";
 import { contextFilms } from "../../context";
 import { films } from "../../containers/FilmsPage";
 import mcss from '../../styles/AddFilm.module.css';
@@ -25,6 +25,7 @@ export function AddFilm() {
                 <button className={mcss.AddListButton1} onClick={() => {
                     setnewFilms(() => {
                         films.push({
+                            id: Date.now(),
                             name: input.current.value,
                             img: Img777,
                             discription: input1.current.value

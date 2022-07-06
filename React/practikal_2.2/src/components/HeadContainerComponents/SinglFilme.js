@@ -6,18 +6,20 @@ import { Link } from "react-router-dom";
 
 
 export function SinglFilme() {
+
     const { title } = useParams();
 
-    let arr = films;
-
+    let i;
+    for (i = 0; i < films.length; i++){
+        if(films[i].id == title){
+            break;
+        }
+    }
     return (
-        <div>
-  
-        {/* arr.map((el,i) =>{
-            return(
-                <Link to={`/films/${arr[i].name}`}></Link>
-            )
-            }) */}
+         <div>
+            <h1>{films[i].name}</h1>
+            <img src={films[i].img} />
+            <p>{films[i].discription}</p>
         </div>
     )
 }
