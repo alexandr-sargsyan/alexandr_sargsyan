@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext, useRef ,useState} from "react";
 import { contextFilms } from "../../context";
-import { films } from "../../App";
-import mcss from '../../styles/App.module.css';
+import { films } from "../../containers/FilmsPage";
+import mcss from '../../styles/AddFilm.module.css';
 import Img777 from "../../images/filmImPoster/film777.jpg"
 
 export function AddFilm() {

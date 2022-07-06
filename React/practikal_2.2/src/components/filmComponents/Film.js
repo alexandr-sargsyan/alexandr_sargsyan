@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import mcss from "../../styles/Film.module.css";
 import { contextFilms } from "../../context";
-import { films } from "../../App";
+import { films } from "../../containers/FilmsPage";
+import { Link, Routes, Route } from "react-router-dom";
 
 
 export function Film(props) {
@@ -11,6 +12,20 @@ export function Film(props) {
 
     const { newFilms, setnewFilms } = useContext(contextFilms)
 
+    // function SinglFilm() {
+    //     return (
+    //         <div>
+    //             <h1>{filmName}</h1>
+    //             <img src={img} />
+    //             <p>{discription}</p>
+    //         </div>
+    //     )
+    // }
+
+
+    // <Routes>
+    //     <Route path="/777" element={<SinglFilm />} />
+    // </Routes>
     return (
         <div className={mcss.Film}>
             <button className="buttonDelite" onClick={() => {
@@ -21,6 +36,9 @@ export function Film(props) {
                 })
             }
             }>delite</button>
+
+            <Link className={mcss.linkGoTo} to={"/films/aaa"} >Go-To</Link>
+
             <h1>{filmName}</h1>
             <img src={img} />
             <p>{discription}</p>

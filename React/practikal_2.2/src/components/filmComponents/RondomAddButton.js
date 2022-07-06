@@ -1,5 +1,5 @@
 import React from "react";
-import { films } from "../../App";
+import { films } from "../../containers/FilmsPage";
 import { useContext } from "react";
 import { contextFilms } from "../../context";
 

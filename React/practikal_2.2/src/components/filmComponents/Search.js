@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { contextFilms } from "../../context";
-import { films } from "../../App";
+import { films } from "../../containers/FilmsPage";
 
 export function Search() {
     const { newFilms, setnewFilms } = useContext(contextFilms);

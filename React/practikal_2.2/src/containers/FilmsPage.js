@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
-import { FilmContainer } from "./components/filmComponents/FilmContainer"
-import { startFilmArray } from "./components/filmComponents/startFilmArray";
-import { Search } from "./components/filmComponents/Search";
-import { contextFilms } from "./context";
-import { AddFilm } from "./components/filmComponents/AddFilm";
-import mcss from './styles/App.module.css';
-import { RondomAddButton } from "./components/filmComponents/RondomAddButton";
+import { FilmContainer } from "../components/filmComponents/FilmContainer"
+import { startFilmArray } from "../components/filmComponents/startFilmArray";
+import { Search } from "../components/filmComponents/Search";
+import { contextFilms } from "../context";
+import { AddFilm } from "../components/filmComponents/AddFilm";
+import mcss from '../styles/AddFilm.module.css';
+import { RondomAddButton } from "../components/filmComponents/RondomAddButton";
 export const films = startFilmArray;
 
-function App() {
+function FilmsPage() {
   let [newFilms, setnewFilms] = useState(films);
   let filmCounnt = newFilms.length;
   let [adding, setAdding] = useState({});
@@ -32,6 +32,6 @@ function App() {
     </contextFilms.Provider>
   );
 }
-export default App;
+export default FilmsPage;
 
 ;

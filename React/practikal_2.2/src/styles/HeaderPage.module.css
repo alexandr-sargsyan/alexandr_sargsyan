@@ -1,0 +1,19 @@
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(73, 73, 73);
+}
+
+.link {
+    color: wheat;
+
+}
+
+
+/* .active{
+    color: var(--color-active);
+    cursor: default;
+} */
